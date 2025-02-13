@@ -12,12 +12,12 @@
 </head>
 
 <body>
-	<form action="/update.members" method="post" id="frm">
+	<form action="/update.member" method="post" id="frm">
 	<input type="hidden" name="id" value="${dto.getId()}">
 	<input type="hidden" name="name" id="hiddenName">
 	<input type="hidden" name="email" id="hiddenEmail">
-	<input type="hidden" name="tel" id="hiddenTel">	
-	<input type="hidden" name="post" id="hiddenPost">	
+	<input type="hidden" name="phone" id="hiddenPhone">	
+	<input type="hidden" name="postcode" id="hiddenPostcode">	
 	<input type="hidden" name="address1" id="hiddenAddress1">	
 	<input type="hidden" name="address2" id="hiddenAddress2">	
 	
@@ -39,8 +39,8 @@
                 <td>${dto.getId()}</td>
                 <td class="editable" id="name">${dto.getName()}</td>
                 <td class="editable" id="email">${dto.getEmail()}</td>
-                <td class="editable" id="tel">${dto.getTel()}</td>
-                <td class="editable" id="post">${dto.getPost()}</td>
+                <td class="editable" id="phone">${dto.getPhone()}</td>
+                <td class="editable" id="postcode">${dto.getPostcode()}</td>
                 <td class="editable" id="address1">${dto.getAddress1()}</td>
                 <td class="editable" id="address2">${dto.getAddress2()}</td>
                 <td>${dto.getDate()}</td>
@@ -71,8 +71,8 @@
 		$("#frm").on("submit",function() {
 			$("#hiddenName").val($("#name").html());
 			$("#hiddenEmail").val($("#email").html());
-			$("#hiddenTel").val($("#tel").html());
-			$("#hiddenPost").val($("#post").html());
+			$("#hiddenPhone").val($("#phone").html());
+			$("#hiddenPostcode").val($("#postcode").html());
 			$("#hiddenAddress1").val($("#address1").html());
 			$("#hiddenAddress2").val($("#address2").html());
 
