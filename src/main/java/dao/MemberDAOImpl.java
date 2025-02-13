@@ -26,8 +26,8 @@ public class MemberDAOImpl implements MemberDAO {
 
 			pstat.setString(1,id);
 			pstat.setString(2,password);
-			ResultSet rs = pstat.executeQuery(sql); {
-				while (rs.next()) {
+			try(ResultSet rs = pstat.executeQuery(sql)) {
+				rs.next();
 					String userId = rs.getString("id");
 					String userPassword = rs.getString("password");
 
@@ -39,9 +39,8 @@ public class MemberDAOImpl implements MemberDAO {
 						String address1 = rs.getString("address1");
 						String address2 = rs.getString("address2");
 						Timestamp date = rs.getTimestamp("signup_date");
-						MemberDTO mypage = new MemberDTO(userId,userPassword, name, email, phone, post, address1, address2, date); // 로그인할때
+						return new MemberDTO(userId,userPassword, name, email, phone, post, address1, address2, date); // 로그인할때
 					}
-				}
 			}
 		}
 	}// 로그인
