@@ -49,7 +49,7 @@
     </table>
     </form>
     
-    <script>//ㅎㅇㅁㅇㄴㅇㅁㄴㅇ12312312
+    <script>//ㅎㅇㅁㅇㄴㅇㅁㄴㅇ12312312jjjjj
 		$("#update").on("click", function() {
    			$(".editable").attr("contenteditable","true");
    			$(".editable").focus();
